@@ -48,5 +48,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :production do
+  gem 'rails_12factor', group: :production #rails library tuned to run smoothly on Heroku/Dokku cloud infrastructures
+  gem 'pg' #postgres gem
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
